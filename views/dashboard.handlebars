@@ -1,0 +1,15 @@
+<button class="creat-post"><i class="fas fa-plus"></i> Creat New B log post</button>
+{{#if post.length}}
+<section>
+    <h2>post by you: </h2>
+    <ol> 
+        {{#each post as |post|}}
+    <li>
+        {{> post-info post}}
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+    </ol>
+</section>
+{{/if}}
+<script src="/javascript/nav-createpost.js"></script>
